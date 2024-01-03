@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+html, body {
+  background-color: #FCFCFD;
+}
+p {
+  font-family: 'Playfair Display', serif;
+  color: #323232;
+  letter-spacing: 2px;
+  font-size: 60px;
+}
+img {
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-right-color: #C5964B;
+}
+.fa-bars {
+  font-size: 25px;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+.fa {
+  color: #4c4c4c;
+}
+.menu-container {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+}
+.image-container {
+  height: 100%;
+  margin-left: 100px;
+  position: absolute;
+}
+.text-container {
+  height: 100%;
+  width: 400px;
+  position: absolute;
+  left: 510px;
+}
+.nav-bar {
+  margin: auto;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  width: 300px;
+}
+.underline {
+  margin: auto;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: -47px;
+  height: 1px;
+  width: 54px;
+  background-color: #C5964B;
+}
+.underline2 {
+  margin: auto;
+  position: absolute;
+  top: 309px;
+  left: 50px;
+  height: 1.2px;
+  width: 87px;
+  background-color: #C5964B;
+}
+.sub-title {
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  top: 210px;
+  bottom: 0;
+  left: 50px;
+}
+.title-container {
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  top: 170px;
+  bottom: 0;
+  left: 45px;
+}
+.fa-caret-down {
+  position: absolute;
+  margin: auto;
+  top: 4px;
+  bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+}
+.dropdown {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 50px;
+  left: -80px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+.p-container {
+  font-family: 'Slabo 27px', serif;
+  font-size: 15px;
+  margin: auto; 
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 300px;
+}
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FCFCFD;
+  width: 900px;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.background {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #566732;
+  height: 100%;
+  width: 45%;
+  border-right-style: solid;
+  border-right-width: 5px;
+  border-right-color: #C5964B;
+}

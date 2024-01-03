@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+.main {
+  border-radius: 15px;
+  box-sizing: border-box;
+  background: linear-gradient(to right bottom, #6ab1a9, #20675f);
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  height: 620px;
+  width: 800px;
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 32%;
+  background-image: url(background/19.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 34px 24px 12px;
+  font-weight: 300;
+  font-size: 60px;
+}
+
+p {
+  margin: 0;
+  padding: 0 24px;
+  font-size: 16px;
+  width: 360px;
+  opacity: 0.8;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 8px auto;
+  width: 44%;
+  float: left;
+  padding-left: 50px;
+}
+.class{
+  display: flex;
+  flex-direction: column;
+  margin: 8px auto;
+  width: 44%;
+  padding-top: 150px;
+}
+.class a {
+  padding-left: 100px;
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+}
+.class a:hover{
+  color:#20675f;
+  transition: 0.4s ease-in-out;
+}
+nav .navbar-nav li a:hover{
+  color: darkgreen !important;
+  transition: 0.4s ease-in-out;
+}
+nav .navbar-nav li a{
+  font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: darkgreen !important;
+}
+
+h4 {
+  color: #666;
+  margin: 16px 0 6px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  
+}
+
+input,
+textarea {
+  border: solid 1px #cbcbcb; 
+  border-radius: 6px;
+  width: 100%;
+  padding: 6px 12px;
+  outline: none;
+  margin: 4px auto;
+}
+
+input {
+  height: 28px;
+}
+
+textarea {
+  height: 62px;
+}
+
+button {
+  width: 100%;
+  margin: 24px auto;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+
+  .class{
+    visibility: hidden;
+  }
+  form{
+    width: 90%;
+  }
+
+}

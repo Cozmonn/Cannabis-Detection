@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/profiling.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="shortcut icon" href="..sStatic/Logos_Background/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <nav class="sidebar close">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <a href=""><img src="../static/Logos_Background/favicon.png"></a>
+            </span>
+            <div class="text logo-text">
+                <span class="name">OCP</span>
+                <span class="profession">Cohin Environnement</span>
+            </div>
+        </div>
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+    <div class="menu-bar">
+        <div class="menu"><br><br><br>
+            <ul class="menu-links">
+                <li class="nav-link active">
+                    <a href=" " class="active">
+                        <i class='bx bx-home-alt icon' ></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="">
+                      <i class='bx bx-cabinet icon'></i>
+                        <span class="text nav-text">Gestion <br> du Personnel</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="">
+                      <i class='bx bx-cabinet icon'></i>
+                        <span class="text nav-text">Gestion des<br> équipements</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="">
+                      <i class='bx bx-cabinet icon'></i>
+                        <span class="text nav-text">Laboratoire</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                  <a href="">
+                    <i class='bx bx-cabinet icon'></i>
+                      <span class="text nav-text">Danger et<br> risques </span>
+                  </a>
+              </li>
+            </ul>
+        </div>
+        <div class="bottom-content">
+            <li class="">
+              <a href="">
+                <i class='bx bxs-user-badge icon' undefined ></i>
+                <span class="text nav-text">Edit</span>
+              </a>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </div>
+    </div>
+  </nav>
+  <section class="home">
+    <div class="container-fluid mt-5 home">
+      <div class="container-fluid mt-5">
+          <div id="card" class="m-5">
+              <div id="card-title">
+                  <h1>Badge d'employé :</h1>
+              </div>
+              <div class="container-fluid mt-5">
+                  <div class="container-fluid px-4">
+                      <div class="row justify-content-md-center align-items-cente  mt-3">
+                        <div class="col-sm-3 text-white">
+                            <div id="card-photo">
+                            </div>
+                        </div>
+                        <div class="col-sm-5 text-white">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                              <div class="row gy-2">
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">CNI :</label>
+                                    {{ personnelform.CNI }}
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Badge :</label>
+                                    {{ personnelform.BadgeID }}
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Nom :</label>
+                                    {{ Userform.first_name }}
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Prénom :</label>
+                                    {{ Userform.last_name }}
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Sexe :</label>
+                                    <input class="form-control" type="text" placeholder="Male" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Né(e) le :</label>
+                                    <input class="form-control" type="text" placeholder="10.02.1998" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Ville :</label>
+                                    <input class="form-control" type="text" placeholder="Youssoufia" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Fonction :</label>
+                                    <input class="form-control" type="text" placeholder="Male" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Zone :</label>
+                                    <input class="form-control" type="text" placeholder="10.02.1998" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="col-sm-3 form-group d-inline">
+                                    <label class="cardtitle">Permission :</label>
+                                    <input class="form-control" type="text" placeholder="Youssoufia" aria-label="Disabled input example" disabled>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-sm-3 form-group d-inline">
+                                  <label class="cardtitle">Usrename :</label>
+                                  {{ Userform.username }}
+                              </div>
+                              <div class="col-sm-3 form-group d-inline">
+                                  <label class="cardtitle">Email :</label>
+                                  {{ Userform.email }}
+                              </div>
+                              <div class="col-sm-3 form-group d-inline">
+                                  <label class="cardtitle">Password :</label>
+                                  {{ Userform.password }}
+                              </div>
+                              <div class="w-100"></div>
+                              <div class="col-sm-3 form-group d-inline">
+                                  <label class="cardtitle">Signature du titulaire :</label>
+                                  <div id="cardsign"></div>      
+                              </div>
+                              <div class="w-100 d-md-block"></div>
+                              <br><br>
+                              <div class="form-group d-inline">
+                                  <button type="submit" class="btn btn-outline-secondary justify-content-md-center">Update</button>      
+                                  <button type="submit" class="btn btn-secondary justify-content-md-center">Dashboard</button>      
+                              </div>
+                             </div>     
+                             <br><br><br> 
+                            </form>
+                        </div>
+                        
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</section>
+  <script src="../static/Dashboard.js"></script>
+  </body>
+</html>

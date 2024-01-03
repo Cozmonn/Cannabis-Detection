@@ -1,0 +1,7 @@
+{% if messages %}
+    {% for message in messages %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+            M.toast({html: '{{message}}', classes: 'rounded'});
+        </script>
+    {% endfor%}
+{% endif%}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/editcss.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+  {% if messages %}
+  {% for message in messages %}
+  <script>
+    swal("Error", "{{message}}", "error");                   
+  </script>
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+  <script>
+    swal("success", "{{message}}", "success");                   
+  </script>
+   {% endif %}
+  {% endfor%}
+{% endif%}
+    <section class="main mx-5 mt-5" >
+        <div class="wrapper">
+          <div class="header">
+            <h1>Edit your account!</h1>
+              <p>Do you have a question? Send us a message and we will respond as soon as possible.</p><br>
+          </div>
+            <form method="post">
+                {% csrf_token %}
+                  <br>
+                <label>First name</label>
+                {{form.first_name}}
+                <small id="emailHelp" class="form-text text-muted">Update your firstname!</small><br>
+                <label>Family name</label>
+                {{form.last_name}}
+                <small id="emailHelp" class="form-text text-muted">Update your family name!</small><br>
+                <label>Email adresse</label>
+                {{form.email}}
+                <small id="emailHelp" class="form-text text-muted">Update your email adresse!</small>
+                <br>
+                <button type="submit" class="btn btn-outline-warning">Update It</button>
+            </form>
+          </div>
+      </section>
+</body>
+</html>

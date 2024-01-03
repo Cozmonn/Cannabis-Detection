@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+    background: linear-gradient(to right bottom, #6ab1a9, #20675f);
+    width: auto;
+}
+.wop{
+    min-width: 500px;
+    min-height: 600px;
+    box-shadow: 0 1.25em 1em -.5em #0005;
+}
+#mydiv{    
+    background-image: url(background/00.jpg);
+    z-index: 99;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 523px;
+}
+.bg{
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pow{
+    background-color: #FFEDDB;
+    box-shadow: 0 1.25em 1em -.5em #0005;
+    min-width: 700px;
+    min-height: 600px;
+
+}
+
